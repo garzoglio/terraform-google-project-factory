@@ -1,5 +1,7 @@
 # Google Cloud Project Factory Terraform Module
 
+[FAQ](./docs/FAQ.md) | [Troubleshooting Guide](./docs/TROUBLESHOOTING.md)
+
 This module allows you to create opinionated Google Cloud Platform projects. It creates projects and configures aspects like Shared VPC connectivity, IAM access, Service Accounts, and API enablement to follow best practices.
 
 ## Usage
@@ -7,7 +9,9 @@ There are multiple examples included in the [examples](./examples/) folder but s
 
 ```hcl
 module "project-factory" {
-  source              = "github.com/terraform-google-modules/terraform-google-project-factory?ref=v0.2.0"
+  source              = "terraform-google-modules/project-factory/google"
+  version             = "0.2.1"
+
   name                = "pf-test-1"
   random_project_id   = "true"
   org_id              = "1234567890"
